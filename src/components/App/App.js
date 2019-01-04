@@ -1,28 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as API from '../../utils/apiCalls'
 
-class App extends Component {
+export default class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      city: ''
+    }
+    console.log(process.env.REACT_APP_API_KEY)
+  }
+
+
+  handleChange = async (e) => {
+    const { name, value } = e.target
+    await this.setState({
+      [name]: value
+    })
+  }
+
+  handleSubmit = async (e) => {
+    e.preventDefault()
+    API.findShelter()
+
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>SHELTER</h1>
+        <p>To begin, find a shelter near you</p>
+        <form onSubmit={this.handleSubmit}>
+          <input
+            onChange={this.handleChange}
+            type='text'
+            placeholder='zip or city'
+            value={this.state.city}
+            name='city'
+          />
+          <button>Enter</button>
+        </form>
       </div>
     );
   }
 }
 
-export default App;
