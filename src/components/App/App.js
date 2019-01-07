@@ -22,10 +22,9 @@ export class App extends Component {
     })
   }
 
-  handleSubmit = async (e) => {
-    e.preventDefault()
-    this.props.findShelters(this.state.city)
-
+  handleSubmit = async () => {
+    await this.props.findShelters(this.state.city)
+    return <Results />
   }
 
   render() {
@@ -41,9 +40,8 @@ export class App extends Component {
             value={this.state.city}
             name='city'
           />
-          <button>enter</button>
           <Link to={'/results'}>
-            <button>Results</button>
+            <button onClick={this.handleSubmit}>Enter</button>
           </Link>
         </form>
         <Switch>
