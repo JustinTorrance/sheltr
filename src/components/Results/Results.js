@@ -1,13 +1,19 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-const Results = (shelters) => {
-  const shelter = shelters.petfinder.shelters.shelter.map(shelter => (shelter.name))
-
+const Results = (props) => {
+  const shelters = props.shelters.map(shelter => {
+    return shelter.$t
+  })
   return(
     <section>
-      {shelter}
+       { shelters }
     </section>
   )
 }
 
-export default Results;
+export const mapStateToProps = (state) => ({
+  shelters: state.shelters
+})
+
+export default connect(mapStateToProps)(Results)

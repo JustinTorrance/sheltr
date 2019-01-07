@@ -3,7 +3,7 @@ import * as API from '../../utils/apiCalls'
 import Results from '../Results/Results'
 import { connect } from 'react-redux'
 import { findShelters } from '../../thunks/findShelters'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom'
 
 
 export class App extends Component {
@@ -40,7 +40,10 @@ export class App extends Component {
             value={this.state.city}
             name='city'
           />
-          <button>Enter</button>
+          <button>enter</button>
+          <Link to={'/results'}>
+            <button>REsults</button>
+          </Link>
         </form>
         <Switch>
           <Route 
@@ -55,7 +58,7 @@ export class App extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  findShelters: (url) => dispatch(findShelters(url)),
+  findShelters: (city) => dispatch(findShelters(city)),
 })
 
 export default connect(null, mapDispatchToProps)(App)

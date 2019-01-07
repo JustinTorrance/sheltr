@@ -1,4 +1,4 @@
 export const fetchShelters = (shelters) => ({
-  type: 'FETCH_SHELTER',
+  type: 'FETCH_SHELTERS',
   shelters
 })

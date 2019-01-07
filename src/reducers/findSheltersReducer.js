@@ -1,11 +1,9 @@
 const findSheltersReducer = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_SHELTERS':
-      const shelters = shelters.petfinder.shelters.shelter.map(shelter => {
-        return {
-          name: shelter.name
-        }
-      })
+      console.log('REDUCER')
+      const shelters = action.shelters.petfinder.shelters.shelter.map(shelter => (shelter.name))
+      console.log('REDUCER', shelters)
       return [...state, ...shelters]
     default:
     return state
