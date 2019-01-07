@@ -4,6 +4,7 @@ import Results from '../Results/Results'
 import { connect } from 'react-redux'
 import { findShelters } from '../../thunks/findShelters'
 import { Route, Switch, Link } from 'react-router-dom'
+import Shelter from '../Shelter/Shelter'
 
 
 export class App extends Component {
@@ -42,7 +43,7 @@ export class App extends Component {
           />
           <button>enter</button>
           <Link to={'/results'}>
-            <button>REsults</button>
+            <button>Results</button>
           </Link>
         </form>
         <Switch>
@@ -50,6 +51,11 @@ export class App extends Component {
             exact
             path='/results' 
             component={Results}    
+          />
+          <Route
+            exact
+            path='/shelter'
+            component={Shelter}
           />
         </Switch>
       </div>
