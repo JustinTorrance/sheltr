@@ -7,7 +7,6 @@ export default class App extends Component {
     this.state = {
       city: ''
     }
-    console.log(process.env.REACT_APP_API_KEY)
   }
 
 
@@ -20,8 +19,7 @@ export default class App extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault()
-    API.findShelter()
-
+    API.findShelter(this.state.city)
   }
 
   render() {
