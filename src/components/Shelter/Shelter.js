@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-
 export class Shelter extends Component {
   constructor() {
     super()
@@ -10,24 +9,23 @@ export class Shelter extends Component {
     }
   }
 
-
   render() {
     return (
-      <div>
+      <section className='pets-grid'>
+        <h3 className='shelter-name'>Boulder County Shelter</h3>
         {
           this.props.petsFromShelter.map(pet => {
             return (
-              <div>
-                <p>{pet.name}</p>
-                <p>Size: {pet.size}</p>
-                <p>Age: {pet.age}</p>
-                <p>Sex: {pet.sex}</p>
-
-              </div>
+              <article className='pet-wrapper'>
+                <p className='pet-name'>{pet.name}</p>
+                <p className='pet-size'>Size: {pet.size}</p>
+                <p className='pet-age'>Age: {pet.age}</p>
+                <p className='pet-sex'>Sex: {pet.sex}</p>
+              </article>
             )            
           })          
         }
-      </div>
+      </section>
     )
   }
 }

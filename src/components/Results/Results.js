@@ -15,12 +15,12 @@ const Results = (props) => {
 
   const shelters = props.shelters.map(shelter => {
     return  <Link to='/shelter'>
-              <li onClick={handleClick}>{shelter.name.$t}</li>
+              <li className='shelter-li' onClick={handleClick}>{shelter.name.$t}</li>
             </Link>
   })
 
   return(
-    <ul>
+    <ul className='shelter-list'>
        { shelters }
     </ul>
   )
