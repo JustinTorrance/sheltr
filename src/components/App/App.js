@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 import { findShelters } from '../../thunks/findShelters'
 import { Route, Switch, Link } from 'react-router-dom'
 import Shelter from '../Shelter/Shelter'
+import './_App.scss'
+
 
 
 export class App extends Component {
@@ -28,21 +30,25 @@ export class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>SHELTR</h1>
-        <p>To begin, find a shelter near you</p>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            onChange={this.handleChange}
-            type='text'
-            placeholder='zip code'
-            value={this.state.city}
-            name='city'
-          />
-          <Link to={'/results'}>
-            <button onClick={this.handleSubmit}>Enter</button>
-          </Link>
-        </form>
+      <main className="App">
+        <div className='input-wrapper'>
+
+          <h1 className='title'>SHELTR</h1>
+          <p className='begin'>To begin, find a shelter near you</p>
+          <form onSubmit={this.handleSubmit}>
+            <input
+              className='city-input'
+              onChange={this.handleChange}
+              type='text'
+              placeholder='zip code'
+              value={this.state.city}
+              name='city'
+            />
+            <Link to={'/results'}>
+              <button className='enter-btn' onClick={this.handleSubmit}>Enter</button>
+            </Link>
+          </form>
+        </div>
         <Switch>
           <Route 
             exact
@@ -55,7 +61,7 @@ export class App extends Component {
             component={Shelter}
           />
         </Switch>
-      </div>
+      </main>
     );
   }
 }
