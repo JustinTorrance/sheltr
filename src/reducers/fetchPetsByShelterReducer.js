@@ -7,7 +7,8 @@ const fetchPetsByShelterReducer = (state = [], action) => {
           name: pet.name.$t,
           size: pet.size.$t,
           age: pet.age.$t,
-          sex: pet.sex.$t
+          sex: pet.sex.$t,
+          photo: pet.media.photos.photo[2].$t
         }
       })
       return [...state, ...pets]

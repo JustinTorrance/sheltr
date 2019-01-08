@@ -1,0 +1,51 @@
+.pets-results {
+  width: 100%;
+  position: absolute;
+  top: 340px;
+  display: flex;
+  justify-content: center;
+}
+
+.pets-grid {
+  color: white;
+  position: absolute;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 250px);
+  width: 100%;
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+.shelter-name {
+  color: white;
+  font-size: 3rem;
+  text-shadow:
+      -1px -1px 0 black,  
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
+}
+
+.pet-wrapper {
+  border: solid 2px white;
+  border-radius: 20px;
+  height: 400px;
+  text-align: center;
+  font-size: 1.4rem;
+  text-shadow:
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+
+  p {
+    margin-top: 10px;
+  }
+}
+
+.pet-photo {
+  height: 200px;
+  width: 246px;
+  border-radius: 20px;
+}
