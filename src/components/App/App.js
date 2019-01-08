@@ -24,13 +24,12 @@ export class App extends Component {
 
   handleSubmit = async () => {
     await this.props.findShelters(this.state.city)
-    return <Results />
   }
 
   render() {
     return (
       <div className="App">
-        <h1>SHELTER</h1>
+        <h1>SHELTR</h1>
         <p>To begin, find a shelter near you</p>
         <form onSubmit={this.handleSubmit}>
           <input
