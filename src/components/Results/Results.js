@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link, Switch, Route } from 'react-router-dom'
 import { fetchPetsByShelter } from '../../thunks/fetchPetsByShelter'
+import './_Results.scss'
 
 const Results = (props) => {
 
