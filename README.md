@@ -32,3 +32,6 @@ Jest
 Enzyme  
   
 In your terminal, enter `npm test`
+
+## Author  
+Justin Torrance
