@@ -3,12 +3,16 @@ import { connect } from 'react-redux'
 import './_Display.scss'
 import { addFavorite, removeFavorite } from '../../actions'
 import Card from '../Card/Card.js'
+import { Link } from 'react-router-dom'
 
 export const Display = (props) => {
 
   return (
     <section className='pets-results'>
-      <h3 className='shelter-name'>Boulder County Shelter</h3>
+      <Link to='/favorites'>
+        <button>View Favorites</button>
+      </Link>
+      <h3 className='shelter-name'>Pets Available At This Shelter</h3>
       <section className='pets-grid'>
         {
           props.petsFromShelter.map(pet => {

@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { findShelters } from '../../thunks/findShelters'
 import { Route, Switch, Link } from 'react-router-dom'
 import Display from '../Display/Display'
+import Favorites from '../Favorites/Favorites'
 import './_App.scss'
 
 export class App extends Component {
@@ -49,14 +50,16 @@ export class App extends Component {
         </div>
         <Switch>
           <Route 
-            exact
             path='/results' 
             component={Results}    
           />
           <Route
-            exact
             path='/display'
             component={Display}
+          />
+          <Route 
+            path='/favorites'
+            component={Favorites}
           />
         </Switch>
       </main>

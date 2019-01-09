@@ -15,13 +15,11 @@ export class Card extends Component {
     const pet = this.props.petsFromShelter.find(pet => {
       return e.target.parentNode.id === pet.id
     })
-    
     if (this.props.favorites.includes(pet)) {
       this.props.removeFavorite(pet)
     } else if (!this.props.favorites.includes(pet)) {
       this.props.addFavorite(pet)
     }
-
     this.setState({favorite: !this.state.favorite}) 
   }
 
