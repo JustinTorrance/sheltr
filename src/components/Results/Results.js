@@ -15,7 +15,7 @@ const Results = (props) => {
   }
 
   const shelters = props.shelters.map(shelter => {
-    return  <Link to='/shelter'>
+    return  <Link to='/display'>
               <li className='shelter-li' onClick={handleClick}>{shelter.name.$t}</li>
             </Link>
   })
