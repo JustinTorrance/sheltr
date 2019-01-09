@@ -27,7 +27,6 @@ export const Favorites = (props) => {
 }
 
 export const mapStateToProps = (state) => ({
-  petsFromShelter: state.petsFromShelter,
   favorites: state.favorites
 })
 

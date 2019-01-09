@@ -28,7 +28,6 @@ export const Display = (props) => {
 
 export const mapStateToProps = (state) => ({
   petsFromShelter: state.petsFromShelter,
-  favorites: state.favorites
 })
 
 export const mapDispatchToProps = (dispatch) => ({
