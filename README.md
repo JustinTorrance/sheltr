@@ -2,7 +2,7 @@
 
 ### Search for animal shelters near you. Find which pets are available for adoption at each shelter. Save your searches for later.
 
-Begin by search for a shelter near you.
+Begin by searching for a shelter near you.
 <img width="1439" alt="screen shot 2019-01-09 at 7 43 34 am" src="https://user-images.githubusercontent.com/33379226/50907106-cc716c00-13e3-11e9-9e3a-54ec5074ebef.png">
 
 Click on a shelter to view the current animals available for adoption.
