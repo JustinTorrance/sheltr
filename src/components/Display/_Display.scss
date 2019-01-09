@@ -42,10 +42,24 @@
   p {
     margin-top: 10px;
   }
+
+  .pet-name {
+    font-size: 1.3rem;
+  }
 }
 
 .pet-photo {
   height: 200px;
   width: 246px;
   border-radius: 20px;
+}
+
+.fa-heart {
+  color: white;
+  position: relative;
+  left: 85px;
+    &:hover {
+      color: red;
+      cursor: pointer;
+    }
 }
