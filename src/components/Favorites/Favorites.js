@@ -1,23 +1,23 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import './_Display.scss'
+import './_Favorites.scss'
 import { addFavorite, removeFavorite } from '../../actions'
 import Card from '../Card/Card.js'
 import { Link } from 'react-router-dom'
 
-export const Display = (props) => {
+export const Favorites = (props) => {
 
   return (
     <section className='pets-results'>
-      <Link to='/favorites'>
-        <button>View Favorites</button>
+      <Link to='/display'>
+        <button>Back to Shelter</button>
       </Link>
-      <h3 className='shelter-name'>Pets Available At This Shelter</h3>
+      <h3 className='favorites-name'>Favorites</h3>
       <section className='pets-grid'>
         {
-          props.petsFromShelter.map(pet => {
+          props.favorites.map(favorite => {
             return (
-              <Card {...pet} />
+              <Card {...favorite} />
             )            
           })          
         }
@@ -36,4 +36,4 @@ export const mapDispatchToProps = (dispatch) => ({
   removeFavorite: (pet) => dispatch(removeFavorite(pet))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Display)
+export default connect(mapStateToProps, mapDispatchToProps)(Favorites)
