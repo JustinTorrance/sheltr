@@ -1,26 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import './_Display.scss'
 import { addFavorite, removeFavorite } from '../../actions'
+import Card from '../Card/Card.js'
 
 export const Display = (props) => {
-
-  const toggleFavorite = (e) => {
-    var petID = e.target.parentNode.id
-    if (props.favorites[0]) {
-      props.favorites.find((pet) => {
-        if (petID === pet.id) {
-          props.removeFavorite(pet)
-        }
-      })
-    } else {
-      props.petsFromShelter.map(pet => {
-        if (pet.id === petID) {
-          props.addFavorite(pet)
-        }
-      }) 
-    }    
-  }
 
   return (
     <section className='pets-results'>
@@ -29,14 +13,7 @@ export const Display = (props) => {
         {
           props.petsFromShelter.map(pet => {
             return (
-              <article className='pet-wrapper' id={pet.id}>
-                <img className='pet-photo' src={pet.photo} />
-                <h2 className='pet-name'>{pet.name}</h2>
-                <p className='pet-size'>Size: {pet.size}</p>
-                <p className='pet-age'>Age: {pet.age}</p>
-                <p className='pet-sex'>Sex: {pet.sex}</p>
-                <i className='fas fa-heart' onClick={toggleFavorite}></i>
-              </article>
+              <Card {...pet} />
             )            
           })          
         }
@@ -44,7 +21,6 @@ export const Display = (props) => {
     </section>
   )
 }
-
 
 export const mapStateToProps = (state) => ({
   petsFromShelter: state.petsFromShelter,

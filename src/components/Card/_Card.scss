@@ -1,0 +1,19 @@
+.heart-icon-active {
+  color: red;
+  position: relative;
+  left: 85px;
+    &:hover {
+      color: red;
+      cursor: pointer;
+    }
+  }
+
+.heart-icon {
+  color: white;
+  position: relative;
+  left: 85px;
+    &:hover {
+      color: red;
+      cursor: pointer;
+    }
+  }
