@@ -12,23 +12,17 @@ export class Card extends Component {
   }
 
   toggleFavorite = (e) => {
-    var petID = e.target.parentNode.id
-    if (!this.props.favorites[0]) {
-      this.props.petsFromShelter.map(pet => {
-        if (pet.id === petID) { 
-          this.props.addFavorite(pet)
-        }
-      }) 
-    } else {
-      this.props.favorites.find((pet) => {
-        if (petID === pet.id) {
-          this.props.removeFavorite(pet)
-        } else {
-          this.props.addFavorite(pet)
-        }
-      })
+    const pet = this.props.petsFromShelter.find(pet => {
+      return e.target.parentNode.id === pet.id
+    })
+    
+    if (this.props.favorites.includes(pet)) {
+      this.props.removeFavorite(pet)
+    } else if (!this.props.favorites.includes(pet)) {
+      this.props.addFavorite(pet)
     }
-    this.setState({favorite: !this.state.favorite})  
+
+    this.setState({favorite: !this.state.favorite}) 
   }
 
   render() {
