@@ -4,7 +4,7 @@ import Results from '../Results/Results'
 import { connect } from 'react-redux'
 import { findShelters } from '../../thunks/findShelters'
 import { Route, Switch, Link } from 'react-router-dom'
-import Shelter from '../Shelter/Shelter'
+import Display from '../Display/Display'
 import './_App.scss'
 
 
@@ -57,8 +57,8 @@ export class App extends Component {
           />
           <Route
             exact
-            path='/shelter'
-            component={Shelter}
+            path='/display'
+            component={Display}
           />
         </Switch>
       </main>
