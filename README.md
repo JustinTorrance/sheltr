@@ -16,10 +16,10 @@ View saved animals.
 
 ## Setup
 In your terminal, enter the following commands:  
-`git clone https://github.com/JustinTorrance/sheltr`
+`git clone https://github.com/JustinTorrance/sheltr`  
 `cd sheltr`  
-`npm install`
-`npm start`
+`npm install`  
+`npm start`  
 
 
 ## Tech Stack
