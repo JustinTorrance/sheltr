@@ -7,8 +7,6 @@ import { Route, Switch, Link } from 'react-router-dom'
 import Display from '../Display/Display'
 import './_App.scss'
 
-
-
 export class App extends Component {
   constructor() {
     super()
