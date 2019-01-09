@@ -9,10 +9,10 @@ export const Display = (props) => {
 
   return (
     <section className='pets-results'>
-      <Link to='/favorites'>
-        <button>View Favorites</button>
-      </Link>
       <h3 className='shelter-name'>Pets Available At This Shelter</h3>
+      <Link to='/favorites'>
+        <button className='favorites-btn change-view'>View Favorites</button>
+      </Link>
       <section className='pets-grid'>
         {
           props.petsFromShelter.map(pet => {
