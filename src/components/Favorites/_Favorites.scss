@@ -1,0 +1,21 @@
+.change-view {
+  border-radius: 20px;
+  background-color: black;
+  font-family: 'Buda', cursive;
+  color: white;
+  font-size: 1.3rem;
+  height: 60px;
+  width: 150px;
+  position: absolute;
+  right: 280px;
+   &:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    transition: .2s;
+   }
+}
+
+.shelter-name {
+  text-align: center;
+}
